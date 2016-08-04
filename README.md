@@ -24,4 +24,14 @@ SCB SQL Development Standards can be found here.
 Sybase ASE 12.5 Performance Tuning and Optimisation Manual
 Sybase ASE 15 Query Processing and Optimisation Best Practices whitepaper  (some tips may not apply to Sybase ver 12.5.4 being used)
 
+## SQL语句的分类
+查询语句：select
+数据操纵语句（DML）: INSERT  DELETE   UPDATE
+数据定义语句（DDL）: CREATE  TRUNCATE  DROP   ALTER  RENAME
+事务控制语句（TCL）: COMMIT  ROLLBACK  SAVEPOINT 
+数据控制语句（DCL）: GRANT   REVOKE
 
+## VGRANT { ALL | statement [ ,...n ] }  TO security_account [ ,...n ]
+# statement 是被授予权限的语句。语句列表可以包括： 
+# TO 指定安全帐户列表
+# security_account是权限将应用的安全帐户。安全帐户可以是： Microsoft® SQL Server™ 用户 或SQL Server 角色。
